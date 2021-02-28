@@ -1,0 +1,43 @@
+<app-header></app-header>
+<div class="container-fluid mt-5 mb-5">
+  <div class="card">
+    <div class="card-body">
+      <div class="mb-3 text-right">
+        <form class="d-inline-block">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" name="search"
+            [(ngModel)]="userFilter.name" />
+        </form>
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item mb-3" *ngFor="let user_data of allUsersDataList | filterBy: userFilter">
+          <div class="row align-items-center no-gutters">
+            <div class="col">
+              <div class="form-row m-0">
+                <div class="col-md-3 pl-0">
+                  <p>Name</p>
+                  <h4 [innerHTML]="user_data.name"></h4>
+                </div>
+                <div class="col-md-3">
+                  <p>Email</p>
+                  <h4 [innerHTML]="user_data.email"></h4>
+                </div>
+                <div class="col-md-3">
+                  <p>Contact</p>
+                  <h4 [innerHTML]="user_data.phone"></h4>
+                </div>
+                <div class="col-md-3">
+                  <p>Website</p>
+                  <h4 [innerHTML]="user_data.website"></h4>
+                </div>
+              </div>
+            </div>
+            <div class="col-auto">
+              <button type="button" class="btn bg-primary btn-block"
+                (click)="getParticularUserPosts(user_data)">Post</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

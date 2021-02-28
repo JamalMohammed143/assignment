@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="container-fluid mt-5">
+  <div class="form-row">
+    <div class="col-4" *ngFor="let post_obj of partiUserPostsList">
+      <div class="card mb-3">
+        <div class="card-body">
+          <span style="position: absolute;
+          top: -15px;
+          right: -2px;
+          background: #356997 !important;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          font-size: 16px;
+          text-align: center;
+          color: white;
+          line-height: 1.8;
+          border: 1px solid #1f7bcc !important;" [innerHTML]="post_obj.userId"></span>
+          <h5 class="card-title" [innerHTML]="post_obj.title"></h5>
+          <p class="card-text" [innerHTML]="post_obj.body"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

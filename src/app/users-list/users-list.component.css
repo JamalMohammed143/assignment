@@ -1,0 +1,10 @@
+.list-group p {
+  color: #6c6c6c !important;
+  font-weight: 600;
+}
+
+.list-group h4 {
+  color: #898989;
+  font-weight: normal !important;
+  font-size: 16px !important;
+}
